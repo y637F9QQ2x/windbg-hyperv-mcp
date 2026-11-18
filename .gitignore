@@ -1,0 +1,35 @@
+# .NET build output
+bin/
+obj/
+publish/
+TestResults/
+*.nupkg
+
+# IDE
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.sln.iml
+
+# OS
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
+
+# Local settings: guest address, guest account, KDNET key, tokens. Only appsettings.example.json is tracked;
+# keep the real file outside the repository (README, "Install").
+appsettings*.json
+!src/WinDbgMCP.Server/appsettings.example.json
+windbg-hyperv-mcp*.json
+*.bak*
+
+# MCP client configuration files usually contain local paths
+.mcp.json
+
+# Logs
+*.log

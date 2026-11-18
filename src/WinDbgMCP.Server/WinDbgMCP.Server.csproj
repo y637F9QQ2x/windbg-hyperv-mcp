@@ -1,0 +1,31 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>WinDbgMCP.Server</AssemblyName>
+    <Version>0.1.0</Version>
+    <Product>windbg-hyperv-mcp</Product>
+    <Copyright>Copyright (c) 2025 memoryforensics1; modifications Copyright (c) 2026 Kazuma Matsumoto</Copyright>
+  </PropertyGroup>
+
+  <!-- No configuration file is copied into the build or publish output: the configuration (guest account,
+       KDNET key) lives outside the repository, in the file named by WINDBG_HYPERV_MCP_CONFIG. -->
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="WinDbgMCP.Tests" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ClrDebug" Version="0.3.4" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.3" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.3" />
+    <PackageReference Include="ModelContextProtocol" Version="0.1.0-preview.12" />
+  </ItemGroup>
+
+</Project>
